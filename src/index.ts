@@ -2,6 +2,9 @@ import {get, post, put, SuperAgentRequest} from 'superagent';
 import {ConsentExtended, ConsentPostResponse, ConsentResponse, ConsentsQueryParameters} from '~/consent';
 import {Subject, SubjectPostResponse, SubjectQueryParameters, SubjectResponse} from '~/subject';
 
+export * from  '~/consent';
+export * from  '~/subject';
+
 export interface ResponseError {
   error: boolean;
   status: number;

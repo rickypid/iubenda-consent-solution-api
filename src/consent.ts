@@ -71,11 +71,11 @@ export interface Consent {
    */
   timestamp?: string;
   checksum?: string;
-  subject?: Subject;
+  subject?: ConsentSubject;
   /**
    * Set of key-value pairs with user preferences for the consent action
    */
-  preferences?: Preferences;
+  preferences?: ConsentPreferences;
   /**
    * Considered only when using a `private` key. Saves the passed IP address on the Consent. Default null
    */
@@ -86,8 +86,8 @@ export interface Consent {
   autodetect_ip_address: string;
 }
 export interface ConsentExtended extends Consent{
-  legal_notices?: (LegalNoticesEntity)[] | null;
-  proofs?: (ProofsEntity)[] | null;
+  legal_notices?: (ConsentLegalNoticesEntity)[] | null;
+  proofs?: (ConsentProofsEntity)[] | null;
 }
 
 export interface ConsentResponse extends Consent {
@@ -105,7 +105,7 @@ export interface ConsentPostResponse extends Consent {
   subject_id: string;
 }
 
-export interface Subject {
+export interface ConsentSubject {
   /**
    * Optional, auto-filled if not provided
    */
@@ -120,11 +120,11 @@ export interface Subject {
   verified?: boolean;
 }
 
-export interface Preferences {
+export interface ConsentPreferences {
   [key: string]: string;
 }
 
-export interface LegalNoticesEntity {
+export interface ConsentLegalNoticesEntity {
   /**
    * privacy_policy, cookie_policy, term or a custom identifier
    */
@@ -135,7 +135,7 @@ export interface LegalNoticesEntity {
   version: string;
 }
 
-export interface ProofsEntity {
+export interface ConsentProofsEntity {
   content: string;
   form: string;
 }

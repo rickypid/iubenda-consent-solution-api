@@ -65,10 +65,10 @@ export interface Subject {
 }
 export interface SubjectResponse extends Subject{
   owner_id: string;
-  preferences?: Preferences;
+  preferences?: SubjectPreferences;
   timestamp: string;
 }
-export interface Preferences {
+export interface SubjectPreferences {
   [key: string]: Preference;
 }
 export interface Preference {

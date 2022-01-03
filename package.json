@@ -1,6 +1,6 @@
 {
   "name": "iubenda-consent-solution-api",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "API client to implement Iubenda Consent Solution in backend service",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -53,5 +53,10 @@
       "eslint --fix",
       "git add"
     ]
-  }
+  },
+  "keywords": [
+    "iubenda",
+    "iubenda-api",
+    "iubenda-consent-solution"
+  ]
 }
