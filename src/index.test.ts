@@ -1,7 +1,7 @@
 import {expect} from 'chai';
 import {IubendaConsentSolution} from '~/index';
 
-const validApiKey = process.env['API-KEY']||'YOUR-VALID-IUBENDA-API-KEY';
+const validApiKey = process.env.API_KEY||'YOUR-VALID-IUBENDA-API-KEY';
 const invalidApiKey = 'invalid';
 
 describe('iubenda-consent-solution-api', function () {
