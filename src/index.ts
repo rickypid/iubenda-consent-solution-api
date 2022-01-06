@@ -82,7 +82,7 @@ export interface Consent {
   /**
    * Considered only when using a `private` key. Saves the passed IP address on the Consent. Default null
    */
-  ip_address?: null;
+  ip_address?: string;
   /**
    * Default `true`, Considered only when using a `public` key. Enables or disables (true, false) the IP address autedetection. Default true
    */
@@ -299,7 +299,7 @@ export class IubendaConsentSolution {
   }
 
   async createConsent(consent: ConsentExtended): Promise<ResponseError | ConsentPostResponse> {
-    return IubendaConsentSolution.sendRequest(await IubendaConsentSolution.sendRequest(this.addHeaders(post(this.generateUrl('consent')).send(consent))));
+    return await IubendaConsentSolution.sendRequest(this.addHeaders(post(this.generateUrl('consent')).send(consent)));
   }
 
   async getSubjects(query?: SubjectQueryParameters): Promise<ResponseError | SubjectResponse[]> {

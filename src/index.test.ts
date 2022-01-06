@@ -48,7 +48,42 @@ describe('iubenda-consent-solution-api', function () {
     });
 
     //ToDo implements createConsent()
-
+    it('Add Consent', async function () {
+      const client = new IubendaConsentSolution({apiKey: validApiKey});
+      const result = await client.createConsent({
+        autodetect_ip_address: 'false',
+        subject: {
+          id: '1',
+          email: 'test@test.it',
+          first_name: 'John',
+          last_name: 'Fix',
+        },
+        legal_notices: [
+          {identifier: 'privacy_policy',version: '1'},
+          {identifier: 'terms_and_conditions',version: '1'},
+          {identifier: 'cookie_policy',version: '1'},
+        ],
+        proofs: [
+          {
+            content: '{}',
+            form: '<form></form>',
+          },
+        ],
+        preferences: {
+          privacy_policy: 'true',
+          terms_and_conditions: 'true',
+          cookie_policy: 'true',
+          newsletter_subscription: 'false',
+        },
+        ip_address: '',
+      });
+      if ('error' in result) {
+        console.log(result);
+        expect.fail('Response error! ' + result.message);
+      }
+      else
+        expect(true);
+    });
   });
   describe('Subjects', function () {
     it('Get Subjects', async function () {
