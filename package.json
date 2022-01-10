@@ -12,7 +12,7 @@
     "build": "rimraf dist && ttsc --build tsconfig.prod.json",
     "start": "yarn run start:dev",
     "test": "nyc mocha --config .mocharc.json lib/**/*.test.ts",
-    "test:codcov": "nyc mocha --config .mocharc.json lib/**/*.test.ts --reporter=json > coverage/coverage.json",
+    "test:codcov": "nyc mocha --config .mocharc.json lib/**/*.test.ts && nyc report --reporter=text-lcov | codecov --pipe",
     "test:watch": "mocha --config .mocharc.json --watch lib/**/*.test.ts",
     "lint": "eslint lib/**/*.ts --fix",
     "start:dev": "nodemon --config .nodemonrc.json lib/index.ts",
@@ -31,21 +31,21 @@
     "@typescript-eslint/eslint-plugin": "^4.8.2",
     "@typescript-eslint/parser": "^4.8.2",
     "chai": "^4.2.0",
+    "codecov": "^3.8.3",
     "eslint": "^7.14.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.2",
     "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
+    "nyc": "^15.1.0",
     "rimraf": "^3.0.2",
     "ts-node": "^9.0.0",
     "ttypescript": "^1.5.12",
     "typescript": "^4.1.2",
-    "typescript-transform-paths": "^2.1.0",
-    "nyc": "^15.1.0"
+    "typescript-transform-paths": "^2.1.0"
   },
   "husky": {
-    "hooks": {
-    }
+    "hooks": {}
   },
   "lint-staged": {
     "*.ts": [
