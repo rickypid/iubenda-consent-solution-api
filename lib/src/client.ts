@@ -98,7 +98,7 @@ export class IubendaConsentSolution {
     return await IubendaConsentSolution.sendRequest(req);
   }
 
-  async createSubject(subject: Subject): Promise<ResponseError | SubjectPostResponse> {
+  async createSubject(subject: Subject): Promise<ResponseError | SubjectPostResponse | null> {
     const req = this.addHeaders(post(this.generateUrl('subjects')).send(subject));
     return await IubendaConsentSolution.sendRequest(req);
   }

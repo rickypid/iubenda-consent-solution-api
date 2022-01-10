@@ -1,6 +1,6 @@
 {
   "name": "iubenda-consent-solution-api",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "API client to implement Iubenda Consent Solution in backend service",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -12,6 +12,7 @@
     "build": "rimraf dist && ttsc --build tsconfig.prod.json",
     "start": "yarn run start:dev",
     "test": "nyc mocha --config .mocharc.json lib/**/*.test.ts",
+    "test-codcov": "nyc mocha --config .mocharc.json lib/**/*.test.ts --reporter=json > coverage/coverage.json",
     "test:watch": "mocha --config .mocharc.json --watch lib/**/*.test.ts",
     "lint": "eslint lib/**/*.ts --fix",
     "start:dev": "nodemon --config .nodemonrc.json lib/index.ts",

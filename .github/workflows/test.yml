@@ -23,3 +23,5 @@ jobs:
       - run: npm test
         env:
           API_KEY: ${{ secrets.API_KEY }}
+      - run: npm install codecov -g
+      - run: codecov
