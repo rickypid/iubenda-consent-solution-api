@@ -12,7 +12,7 @@
     "build": "rimraf dist && ttsc --build tsconfig.prod.json",
     "start": "yarn run start:dev",
     "test": "nyc mocha --config .mocharc.json lib/**/*.test.ts",
-    "test-codcov": "nyc mocha --config .mocharc.json lib/**/*.test.ts --reporter=json > coverage/coverage.json",
+    "test:codcov": "nyc mocha --config .mocharc.json lib/**/*.test.ts --reporter=json > coverage/coverage.json",
     "test:watch": "mocha --config .mocharc.json --watch lib/**/*.test.ts",
     "lint": "eslint lib/**/*.ts --fix",
     "start:dev": "nodemon --config .nodemonrc.json lib/index.ts",
