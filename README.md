@@ -1,5 +1,8 @@
 # iubenda-consent-solution-api
 
+[![Test CI](https://github.com/rickypid/iubenda-consent-solution-api/actions/workflows/test.yml/badge.svg)](https://github.com/rickypid/iubenda-consent-solution-api/actions/workflows/test.yml)
+[![codecov](https://codecov.io/gh/rickypid/iubenda-consent-solution-api/branch/main/graph/badge.svg?token=3100WHBX8W)](https://codecov.io/gh/rickypid/iubenda-consent-solution-api)
+
 API client to implement Iubenda Consent Solution in backend service.
 
 ## Install
