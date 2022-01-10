@@ -75,7 +75,7 @@ describe('iubenda-consent-solution-api', function () {
         first_name: first_name,
         last_name: last_name,
       });
-      if ('error' in result)
+      if (result && 'error' in result)
         expect.fail('Response error! ' + result.message);
       else
         expect(true);
@@ -91,7 +91,7 @@ describe('iubenda-consent-solution-api', function () {
         last_name: last_name,
       };
       const result = await client.createSubject(subject);
-      if ('error' in result)
+      if (result && 'error' in result)
         expect.fail('Response error! ' + result.message);
       subject.first_name = first_name_update;
       const result1 = await client.updateSubject(subject, id);
