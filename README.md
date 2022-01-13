@@ -1,7 +1,16 @@
 # iubenda-consent-solution-api
 
+[![npm](https://badgen.net/npm/v/iubenda-consent-solution-api)](https://www.npmjs.com/package/iubenda-consent-solution-api)
+[![Downloads](https://badgen.net/npm/dt/iubenda-consent-solution-api)](https://www.npmjs.com/package/iubenda-consent-solution-api)
+[![Types](https://badgen.net/npm/types/iubenda-consent-solution-api)](https://www.npmjs.com/package/iubenda-consent-solution-api)
+
 [![Test CI](https://github.com/rickypid/iubenda-consent-solution-api/actions/workflows/test.yml/badge.svg)](https://github.com/rickypid/iubenda-consent-solution-api/actions/workflows/test.yml)
 [![codecov](https://codecov.io/gh/rickypid/iubenda-consent-solution-api/branch/main/graph/badge.svg?token=3100WHBX8W)](https://codecov.io/gh/rickypid/iubenda-consent-solution-api)
+
+[![GitHub issues](https://img.shields.io/github/issues/rickypid/iubenda-consent-solution-api)](https://github.com/rickypid/iubenda-consent-solution-api/issues)
+[![GitHub forks](https://img.shields.io/github/forks/rickypid/iubenda-consent-solution-api)](https://github.com/rickypid/iubenda-consent-solution-api/network)
+[![GitHub stars](https://img.shields.io/github/stars/rickypid/iubenda-consent-solution-api)](https://github.com/rickypid/iubenda-consent-solution-api/star)
+[![GitHub license](https://img.shields.io/github/license/rickypid/iubenda-consent-solution-api)](https://github.com/rickypid/iubenda-consent-solution-api/blob/main/LICENSE)
 
 API client to implement Iubenda Consent Solution in backend service.
 
