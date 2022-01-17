@@ -1,6 +1,6 @@
 {
   "name": "iubenda-consent-solution-api",
-  "version": "0.2.1",
+  "version": "1.0.1",
   "description": "API client to implement Iubenda Consent Solution in backend service",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -45,7 +45,10 @@
     "typescript-transform-paths": "^2.1.0"
   },
   "husky": {
-    "hooks": {}
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
   },
   "lint-staged": {
     "*.ts": [
@@ -56,6 +59,9 @@
   "keywords": [
     "iubenda",
     "iubenda-api",
-    "iubenda-consent-solution"
+    "iubenda-consent-solution",
+    "consent-solution",
+    "api",
+    "client"
   ]
 }
